@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website - Product Layout</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #1a1f2e;
+      font-family: Arial, sans-serif;
+      color: #e8eaf0;
+    }
+
+    .site-header {
+      background: #242b3d;
+      border: 1px solid #3a4460;
+    }
+
+    .logo-box {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2e3a55;
+      font-weight: 700;
+      color: #f4a235;
+    }
+
+    .navbar-box {
+      min-height: 82px;
+      background: #242b3d;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-box .nav-link {
+      color: #c8cfe0;
+      font-size: 14px;
+      padding: .5rem .7rem;
+    }
+
+    .navbar-box .nav-link:hover {
+      color: #f4a235;
+    }
+
+    .sidebar {
+      background: #2a3247;
+      min-height: 390px;
+      padding: 16px 12px;
+    }
+
+    .sidebar .nav-link {
+      color: #c8cfe0;
+      border-radius: 4px;
+      padding: 9px 10px;
+      font-size: 14px;
+    }
+
+    .sidebar .nav-link:hover {
+      background: #3a4460;
+      color: #f4a235;
+    }
+
+    .sidebar .nav-link.active {
+      background: #f4a235;
+      color: #1a1f2e;
+    }
+
+    .content-area {
+      background: #232a3b;
+      padding: 14px;
+      min-height: 390px;
+    }
+
+    .section-heading {
+      background: #2e3a55;
+      padding: 9px;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #f4a235;
+      border-left: 4px solid #f4a235;
+    }
+
+    .product-card {
+      background: #2a3247;
+      border: 1px solid #3a4460;
+      border-radius: 3px;
+      height: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 125px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .product-name {
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: #e8eaf0;
+    }
+
+    .price {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #f4a235;
+    }
+
+    .btn-primary {
+      background-color: #f4a235;
+      border-color: #f4a235;
+      color: #1a1f2e;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background-color: #e0911f;
+      border-color: #e0911f;
+      color: #1a1f2e;
+    }
+
+    .pagination-wrap {
+      background: #2e3a55;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+    .page-link {
+      background-color: #2a3247;
+      border-color: #3a4460;
+      color: #c8cfe0;
+    }
+
+    .page-link:hover {
+      background-color: #f4a235;
+      border-color: #f4a235;
+      color: #1a1f2e;
+    }
+
+    .page-item.active .page-link {
+      background-color: #f4a235;
+      border-color: #f4a235;
+      color: #1a1f2e;
+    }
+
+    .site-footer {
+      background: #242b3d;
+      border-top: 2px solid #f4a235;
+      text-align: center;
+      padding: 18px 10px;
+      color: #c8cfe0;
+    }
+
+    .copyright {
+      font-size: 12px;
+      color: #7a8099;
+      margin-top: 7px;
+    }
+
+    @media (max-width: 767.98px) {
+      .logo-box {
+        min-height: 65px;
+      }
+
+      .navbar-box {
+        min-height: auto;
+        padding: 8px;
+      }
+
+      .sidebar {
+        min-height: auto;
+      }
+
+      .content-area {
+        min-height: auto;
+      }
+
+      .product-card img {
+        height: 110px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid p-3">
+
+    <!-- Row 1: Header -->
+    <header class="site-header row g-1 p-1 mb-2">
+      <div class="col-md-3">
+        <div class="logo-box flex-column">
+          <div>LOGO</div>
+          <small class="fw-normal">My Website</small>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <nav class="navbar-box navbar navbar-expand-lg justify-content-end px-3">
+          <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Row 2: Sidebar + Main Content -->
+    <div class="row g-2 mb-2">
+      <aside class="col-md-3">
+        <nav class="sidebar rounded-1">
+          <h6 class="text-center fw-bold mb-3" style="color:#f4a235;">Menu</h6>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link active" href="#">⌂ &nbsp; Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">▣ &nbsp; Electronics</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">♧ &nbsp; Clothing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">▤ &nbsp; Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">⌂ &nbsp; Home &amp; Kitchen</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">◉ &nbsp; Sports</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">♧ &nbsp; Toys</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">◇ &nbsp; Offers</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="col-md-9">
+        <div class="content-area rounded-1">
+          <div class="section-heading">Product Cards Section</div>
+          <div class="row g-2">
+            <div class="col-6 col-lg-3">
+              <article class="product-card">
+                <img
+                  src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="Laptop">
+                <div class="product-name">Laptop</div>
+                <div class="price">&#8377;45,990</div>
+                <button class="btn btn-primary btn-sm w-100">Add to Cart</button>
+              </article>
+            </div>
+            <div class="col-6 col-lg-3">
+              <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
+                  alt="Smartphone">
+                <div class="product-name">Smartphone</div>
+                <div class="price">&#8377;79,999</div>
+                <button class="btn btn-primary btn-sm w-100">Add to Cart</button>
+              </article>
+            </div>
+            <div class="col-6 col-lg-3">
+              <article class="product-card">
+                <img
+                  src="https://images.unsplash.com/photo-1777987601471-22def6494460?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="Sports Shoes">
+                <div class="product-name">Sports Shoes</div>
+                <div class="price">&#8377;3,499</div>
+                <button class="btn btn-primary btn-sm w-100">Add to Cart</button>
+              </article>
+            </div>
+            <div class="col-6 col-lg-3">
+              <article class="product-card">
+                <img
+                  src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="Smart Watch">
+                <div class="product-name">Smart Watch</div>
+                <div class="price">&#8377;8,999</div>
+                <button class="btn btn-primary btn-sm w-100">Add to Cart</button>
+              </article>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="pagination-wrap rounded-1" aria-label="Product pages">
+            <ul class="pagination pagination-sm justify-content-center mb-0">
+              <li class="page-item"><a class="page-link" href="#" aria-label="Previous">&#8249;</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#" aria-label="Next">&#8250;</a></li>
+            </ul>
+          </nav>
+        </div>
+      </main>
+    </div>
+
+    <!-- Row 3: Footer -->
+    <footer class="site-footer rounded-1">
+      <div class="fw-bold" style="color:#f4a235;">My Website</div>
+      <div class="copyright">&copy; 2026 My Website. All Rights Reserved.</div>
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
